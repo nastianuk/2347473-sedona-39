@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -15,29 +16,29 @@
         </a>
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="nav-link" href="#">Главная</a>
+            <a class="nav-link" href="index.html">Главная</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">О седоне</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Гостиницы</a>
+            <a class="nav-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="user-list">
-          <li class="user-item">
-            <a class="user-link" href="#">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="user-item">
-            <a class="user-link" href="#">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
-          <li class="user-item">
-            <a class="user-link" href="#">
-              <span class="visually-hidden">Хочу сюда!</span>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <button class="nav-btn button" href="#">Хочу сюда!</button>
             </a>
           </li>
         </ul>
@@ -45,9 +46,10 @@
     </header>
 
     <main class="catalog-main" data-test="main">
+      <div class="filter-background">
       <header class="catalog-nav">
         <h1 class="catalog-header-title">Гостиницы Седоны</h1>
-        <ol>
+        <ol class="breadcrumbs-list">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
@@ -110,6 +112,7 @@
           </div>
         </form>
       </section>
+    </div>
 
       <section class="results" data-test="catalog">
         <h2 class="visually-hidden">Результаты поиска</h2>
@@ -121,14 +124,14 @@
           <option value="sales">Скидки</option>
         </select>
         <div class="display button-card">
-          <a class="grid" href="#">
+          <a class="grid button-card" href="#">
             <span class="visually-hidden">Показать в виде сетки</span>
           </a>
           <a class="extendid button-card" href="#">
             <span class="visually-hidden">Показать в рассширенном виде</span>
           </a>
           <a class="list button-card" href="#">
-            <span class="visually-hidden">Показать в виде списка"</span>
+            <span class="visually-hidden">Показать в виде списка</span>
           </a>
         </div>
         <ul class="product-list">
@@ -139,8 +142,8 @@
             </a>
             <p>Гостинница</p>
             <p class="price">От 4000 ₽</p>
-            <a class="product-btn-link" href="#">Подробнее</a>
-            <button class="product-btn" type="button">В избранное</button>
+            <a class="product-btn-link button" href="#">Подробнее</a>
+            <button class="product-btn button" type="button">В избранное</button>
             <p class="stars">
               <span class="visually-hidden">Отель 4 звезды</span>
             </p>
@@ -153,8 +156,8 @@
             </a>
             <p>Гостинница</p>
             <p class="price">От 5000 ₽</p>
-            <a class="product-btn-link" href="#">Подробнее</a>
-            <button class="product-btn" type="button">В избранное</button>
+            <a class="product-btn-link button" href="#">Подробнее</a>
+            <button class="product-btn button" type="button">В избранное</button>
             <p class="stars">
               <span class="visually-hidden">Отель 4 звезды</span>
             </p>
@@ -167,8 +170,8 @@
             </a>
             <p>Гостинница</p>
             <p class="price">От 2500 ₽</p>
-            <a class="product-btn-link" href="#">Подробнее</a>
-            <button class="product-btn" type="button">В избранное</button>
+            <a class="product-btn-link button" href="#">Подробнее</a>
+            <button class="product-btn button" type="button">В избранное</button>
             <p class="stars">
               <span class="visually-hidden">Отель 3 звезды</span>
             </p>
@@ -181,8 +184,8 @@
             </a>
             <p>Гостинница</p>
             <p class="price">От 1500 ₽</p>
-            <a class="product-btn-link" href="#">Подробнее</a>
-            <button class="product-btn" type="button">В избранное</button>
+            <a class="product-btn-link button" href="#">Подробнее</a>
+            <button class="product-btn button" type="button">В избранное</button>
             <p class="stars">
               <span class="visually-hidden">Отель 2 звезды</span>
             </p>
@@ -191,7 +194,7 @@
         </ul>
         <ul class="pagination-list">
           <li class="pagination-item">
-            <a class="pagination-link" href="#">1</a>
+            <a class="pagination-link pagination-active" href="#">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">2</a>
@@ -211,13 +214,13 @@
         </ul>
       </section>
 
-      <section class="newsletter" data-test="subscribe">
+      <section class="newsletter-catalog" data-test="subscribe">
         <h2 class="visually-hidden">Рассылка о новостях</h2>
-        <p class="newsletter-title">Подпишитесь на рассылку</p>
-        <p class="newsletter-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-        <form class="newsletter-form">
-          <input class="newsletter-input" type="email" placeholder="Ваш e-mail">
-          <input class="newsletter-btn" type="submit" value="Подписаться">
+        <p class="newsletter-title-catalog">Подпишитесь на рассылку</p>
+        <p class="newsletter-text-catalog">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+        <form class="newsletter-form-catalog">
+          <input class="newsletter-input-catalog" type="email" placeholder="Ваш e-mail">
+          <button class="newsletter-btn button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>

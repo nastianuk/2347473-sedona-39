@@ -25,7 +25,7 @@
             <a class="nav-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="nav-list">
+        <ul class="nav-list client-list">
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span class="visually-hidden">Поиск</span>
@@ -34,7 +34,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span class="visually-hidden">Избранное</span>
-              <span class="loke-number">В избранном 12 пунктов</span>
+              <span class="loke-number visually-hidden">В избранном 12 пунктов</span>
             </a>
           </li>
           <li class="nav-item">
@@ -44,22 +44,22 @@
       </nav>
     </header>
 
-    <main class="main-index" data-test="main">
+    <main class="main-container main-index" data-test="main">
+      <div class="page-container">
       <section class="hero-block" data-test="hero">
         <h1 class="visually-hidden">Седона</h1>
         <img class="hero-text" src="images/text-hero.svg" width="458" height="352"
           alt="Welcome to the gorgeus. Sedona. Because the Grand Canyon sucks">
       </section>
-
       <section class="advantages-block" data-test="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <p class="small-city title-text">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</p>
         <p class="consider-reasons subtitle-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         <ul class="advantages-list">
           <li class="advantages-item">
-            <div class="advantages-blue">
-              <h3 class="advantages-blue-title">Настоящий городок</h3>
-              <p class="advantage-blue-text">Седона — не аттракцион для<br> туристов, там течёт своя<br> жизнь</p>
+            <div class="advantages-different">
+              <h3 class="advantages-different-title">Настоящий городок</h3>
+              <p class="advantage-different-text">Седона — не аттракцион для<br> туристов, там течёт своя<br> жизнь</p>
               <img class="advantage-img" src="images/advantages-real-city.jpg"
                 alt="Дома на фоне деревьев и цветов с флагами разных стран">
             </div>
@@ -83,9 +83,9 @@
             </div>
           </li>
           <li class="advantages-item">
-            <div class="advantages-blue">
-              <h3 class="advantages-blue-title">Там есть мост дьявола</h3>
-              <p class="advantage-blue-text">Да, по нему можно пройти!<br>Если вы осмелитесь,<br>разумеется</p>
+            <div class="advantages-different">
+              <h3 class="advantages-different-title">Там есть мост дьявола</h3>
+              <p class="advantage-different-text">Да, по нему можно пройти!<br>Если вы осмелитесь,<br>разумеется</p>
               <img class="advantage-img" src="images/advantages-diavol-bridge.jpg" width="800" height="385"
                 alt="Мост дьявола">
             </div>
@@ -93,24 +93,26 @@
         </ul>
       </section>
 
-      <section class="reccomendations">
+      <section class="recomendations">
         <h2 class="visually-hidden">Рекомендации</h2>
         <p class="visit-sedona title-text">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
         <p class="experienced-staff subtitle-text">Опытный персонал и качественное обслуживание!</p>
         <ul class="recommendation-list">
           <li class="recommendation-item">
-            <div class="reccomendation-light">
-            <p class="reccomendation-title">Жильё</p>
+            <div class="recommendation-light">
+            <p class="recommendation-title">Жильё</p>
             <p class="recommendation-text">Рекомендуем пожить<br>в настоящем мотеле, <br>всё как в кино!</p>
           </div>
           </li>
           <li class="recommendation-item">
-            <p class="reccomendation-title">Еда</p>
+            <div class="recommendation-different">
+            <p class="recommendation-title">Еда</p>
             <p class="recommendation-text">Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
+          </div>
           </li>
           <li class="recommendation-item">
-            <div class="reccomendation-light">
-            <p class="reccomendation-title">Сувениры</p>
+            <div class="recommendation-light">
+            <p class="recommendation-title">Сувениры</p>
             <p class="recommendation-text">Не только китайского,<br>но и настоящего местного<br>производства!</p>
           </div>
           </li>
@@ -124,7 +126,7 @@
         <button class="search-hotel-btn button" type="button">Поиск гостиницы в Седоне</button>
       </section>
 
-      <section class="newsletter" data-test="subscribe">
+      <section class="newsletter newsletter-background-image" data-test="subscribe">
         <h2 class="newsletter-title title-text">Подпишитесь на рассылку</h2>
         <p class="newsletter-text subtitle-text">Только полезная информация и никакого спама,<br> честное бойскаутское!
         </p>
@@ -133,9 +135,11 @@
           <button class="newsletter-btn button" type="submit">Подписаться</button>
         </form>
       </section>
+    </div>
     </main>
 
     <footer class="page-footer" data-test="footer">
+      <div class="page-footer-container">
       <div class="footer-socials">
         <ul class="socials-list">
           <li class="social-item">
@@ -155,7 +159,7 @@
           </li>
         </ul>
       </div>
-      <address>
+      <address class="phone-address">
         <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </address>
       <div class="author-logo">
@@ -163,6 +167,7 @@
           <img class="author-logo-img" src="images/footer-logo.svg" width="114" height="32" alt="html academy">
         </a>
       </div>
+    </div>
     </footer>
   </body>
 

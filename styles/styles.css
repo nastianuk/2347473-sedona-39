@@ -40,32 +40,45 @@ body {
 
 .main-nav {
     display: flex;
-    width: 1200px;
+    width: 1060px;
     margin: 0 auto;
+    column-gap: 30px;
 }
 
 .nav-link {
+    display: block;
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
+    text-align: center;
     color: #000000;
     text-decoration: none;
+    padding: 20px 16px;
 }
 
 .nav-list {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .nav-logo-link {
-    margin-left: 70px;
-    margin-right: 28px;
+    align-self: flex-start;
+    padding: 0;
+    width: 140px;
+    margin-bottom: -6px;
 }
 
 .client-list {
     margin-left: auto;
-    margin-right: 70px;
+    align-content: center;
+}
+
+.client-list .nav-link {
+    min-width: 12px;
+    min-height: 22px;
 }
 
 .page-container {
@@ -94,6 +107,9 @@ body {
     background-repeat: no-repeat;
     background-position: left bottom, left top;
     background-color: #F2F2F2;
+    padding-top: 51px;
+    padding-bottom: 83px;
+    margin-bottom: 69px;
 }
 
 .hero-text {
@@ -101,17 +117,26 @@ body {
     margin: 0 auto;
 }
 
+.advantages-block {
+    margin-bottom: 64px;
+}
+
 .title-text {
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .subtitle-text {
     font-size: 22px;
     line-height: 26px;
     color: #333333;
+    text-align: center;
+    margin-top: 0;
 }
 
 .advantages-list {
@@ -126,6 +151,17 @@ body {
 .advantages-different {
     background-color: #82B3D3;
     width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.different-text-container {
+    padding: 102px 85px;
+    text-align: center;
+}
+
+.different-reverse {
+    flex-direction: row-reverse;
 }
 
 .advantages-item h3, .recommendation-title {
@@ -135,29 +171,61 @@ body {
     text-transform: uppercase;
 }
 
-.advantages-different-title, .advantage-different-text {
+.advantages-item p, .recommendation-text {
+    color: #333333;
+}
+
+.advantages-different-title {
+    margin: 0;
     color: #ffffff;
 }
 
-.advantages-item p, .recommendation-text {
-    color: #333333;
+.different-text-container .advantage-different-text {
+    color: #ffffff;
 }
 
 .advantages-light {
     background-color: rgba(131, 179, 211, 0.12);
     width: 400px;
+    padding: 112px 85px;
+    min-height: 385px;
+    text-align: center;
+}
+
+.visit-sedona {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.experienced-staff {
+    margin-top: 0;
+    margin-bottom: 64px;
 }
 
 .recommendation-light {
     background-color: rgba(131, 179, 211, 0.12);
     width: 400px;
+    padding: 81px 85px;
+    min-height: 385px;
+    text-align: center;
 }
  .advantages-center {
     background-color: rgba(131, 179, 211, 0.2);
     width: 400px;
+    padding: 112px 85px;
+    min-height: 385px;
+    text-align: center;
  }
 .recommendation-different {
     width: 400px;
+    padding: 81px 85px;
+    min-height: 385px;
+    text-align: center;
+}
+
+.recommendations {
+    margin-top: 0;
+    margin-bottom: 96px;
 }
 
 .recommendation-list {
@@ -169,11 +237,17 @@ body {
     padding: 0;
 }
 
+.search-hotel {
+    margin-top: 0;
+    margin-bottom: 96px;
+}
+
 .search-hotel-btn {
     width: 376px;
     height: 52px;
     font-size: 20px;
-    line-height: 36px;
+    display: block;
+    margin: auto;
 }
 
 .newsletter-background-image {
@@ -204,6 +278,8 @@ body {
 }
 
 .socials-list {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -219,12 +295,15 @@ body {
 
 /*catalog*/
 
+
 .filter-background {
     background-image: url("../images/catalog-hero.jpg");
     background-size: 100% auto, cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #F2F2F2;
+    padding: 35px 0 70px 0;
+    margin: 0 0 50px 0;
 }
 
 .catalog-header-title {
@@ -232,11 +311,18 @@ body {
     font-weight: 700;
     line-height: 78px;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding-top: 35px;
+    padding-left: 30px;
 }
 
 .breadcrumbs-list {
     list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .breadcrumbs-link {
@@ -287,16 +373,16 @@ body {
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 20px;
     width: 1060px;
     margin: 0 70px;
     padding: 0;
     list-style: none;
-
 }
 
 
 .product-item {
+    width: 340px;
     padding: 20px;
     border: 1px solid #E6E6E6;
     border-radius: 4px;
@@ -341,15 +427,36 @@ body {
 }
 
 .pagination-list {
+    display: flex;
+    margin: 0;
+    padding: 40px 70px 60px 70px;
     list-style: none;
 }
 
+.pagination-item:not(:last-child) {
+    margin-right: 8px;
+}
+
 .pagination-link {
+    display: block;
+    box-sizing: border-box;
     background-color: #82B3D3;
     font-size: 20px;
     line-height: 36px;
     color: #ffffff;
+    border-radius: 4px;
     text-decoration: none;
+    padding: 12px 24px;
+    width: 60px;
+    height: 60px;
+}
+
+.pagination-more {
+    display: block;
+    box-sizing: border-box;
+    padding: 12px 24px;
+    width: 60px;
+    height: 60px;
 }
 
 .pagination-active {
@@ -387,12 +494,17 @@ body {
     display: flex;
     width: 1200px;
     margin: 0 auto;
+    padding: 40px 70px 30px 70px;
   }
 
   .footer-socials {
-    width: 142px;
     margin-left: 70px;
     margin-right: 237px;
+  }
+
+  .social-item {
+    width: 48px;
+    height: 40px;
   }
 
   .phone-address {
@@ -401,12 +513,21 @@ body {
 
   .author-logo {
     margin-left: auto;
-    margin-right: 70px;
   }
 
   .results-filter-card {
     display: flex;
     width: 1200px;
-    margin: 0 70px;
+    margin-bottom: 40px;
+    padding: 0 70px;
     align-items: baseline;
+  }
+
+  .button-card {
+    width: 48px;
+    height: 48px;
+  }
+
+  .consider-reasons {
+    margin-bottom: 90px;
   }

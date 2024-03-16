@@ -1,9 +1,11 @@
-*{
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans";
     src: url("../fonts/ptsans-400.woff2") format(woff2);
     font-weight: 400;
     font-style: normal;
@@ -11,7 +13,7 @@
 }
 
 @font-face {
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans";
     src: url("../fonts/ptsans-700.woff2") format(woff2);
     font-weight: 700;
     font-display: swap;
@@ -65,58 +67,113 @@ body {
 .main-nav {
     display: flex;
     padding: 0 70px;
-    column-gap: 30px;
+    /* column-gap: 30px; */
 }
 
 .nav-list {
+    min-height: 64px;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0;
+    /* margin: 0 auto 0 0; */
     padding: 0;
-    align-content: center;
+    /* align-content: center; */
 }
+
+.nav-list-page {
+    max-width: 506px;
+    margin: 0 auto 0 0;
+}
+
+.nav-item {
+    position: relative;
+
+ }
 
 .nav-link {
     display: block;
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
-    text-align: center;
+    /* text-align: center; */
     color: #000000;
     text-decoration: none;
     padding: 20px 16px;
+    text-transform: capitalize;
 }
 
 .nav-logo-link {
     padding: 0;
-    width: 140px;
-    margin-bottom: -6px;
+    margin-right: 28px;
+    max-height: 64px;
+    z-index: 1;
 }
 
 .client-list {
-    margin-left: auto;
+    margin: 0 0 0 auto;
+    align-items: center;
 }
 
+
 .nav-link-icon {
-    display: block;
-    min-width: 20px;
-    min-height: 20px;
+    position: relative;
+    display: flex;
+  align-items: center;
+    width: 44px;
+    min-height: 64px;
     padding: 22px 12px;
 }
 
+.navigation-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    fill: #000000;
+}
+
 .nav-btn {
+    padding: 0;
     margin-left: 20px;
 }
 
+.nav-favorite::after {
+    content: "12";
+    position: absolute;
+    /* box-sizing: border-box; */
+    top: 11px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 10px;
+    line-height: 10px;
+    min-width: 20px;
+    height: 20px;
+    padding: 5px;
+    background-color: #7DB54F;
+    border-radius: 50%;
 
+}
+
+.active-nav::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: 15px;
+    left: 16px;
+    height: 2px;
+    background-color: #756257;
+
+}
 
 /* main-index */
 
 .button {
+    display: inline-block;
     font-family: "PT Sans", sans-serif;
     width: 160px;
-    height: 36px;
+    min-height: 36px;
     background-color: #756157;
     border: #756157;
     border-radius: 4px;
@@ -125,6 +182,7 @@ body {
     line-height: 20px;
     color: #ffffff;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 
@@ -207,12 +265,16 @@ body {
     margin: 0 0 30px 0;
 }
 
-.advantages-item p, .recommendation-text {
+.advantages-item p {
     color: #333333;
-}
+ }
 
 .different-text-container .advantage-different-text, .advantages-different-title {
     color: #ffffff;
+}
+
+.advantage-different-text, .advantage-text {
+    margin: 30px 0 0 0;
 }
 
 .advantages-light {
@@ -239,6 +301,16 @@ body {
     margin-bottom: 90px;
   }
 
+.advantages-line {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 2px;
+    width: 60px;
+    margin: 0 auto;
+}
+
+.advantages-different-line {
+background-color: rgba(255, 255, 255, 0.3);
+}
 
 /* recommendations */
 
@@ -279,6 +351,34 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.recommendation-text {
+    margin: 0;
+    color: #333333;
+ }
+
+div.recommendation-icon::before {
+    content: "";
+    min-height: 76px;
+    width: 75px;
+    background-repeat: no-repeat;
+    margin: 0 auto 30px;
+}
+
+.icon-house::before {
+    background-image: url("../images/recommendation-house.svg");
+    background-size: 75px 72px;
+}
+
+.icon-food::before {
+    background-image: url("../images/recommendation-food.svg");
+    background-size: 75px 70px;
+}
+
+.icon-souvenirs::before {
+    background-image: url("../images/recommendation-souvenirs.svg");
+    background-size: 75px 76px;
 }
 
 
@@ -461,14 +561,14 @@ body {
 
 .filter-btn-apply {
     width: 191px;
-    height: 36px;
+    min-height: 36px;
     background-color: #82B3D3;
     margin-bottom: 32px;
 }
 
 .filter-btn-reset {
     width: 191px;
-    height: 36px;
+    min-height: 36px;
     background-color: rgba(130, 179, 211, 0);
 }
 
@@ -495,7 +595,7 @@ body {
 
 .filter-results {
     width: 292px;
-    height: 49px;
+    min-height: 49px;
     color: #333333;
     padding: 14px 20px;
     align-self: center;
@@ -562,7 +662,7 @@ body {
 
 .product-btn {
     width: 140px;
-    height: 36px;
+    min-height: 36px;
     background-color: #82B3D3;
 }
 
@@ -593,7 +693,7 @@ body {
 .pagination-list {
     display: flex;
     margin: 0;
-    padding: 40px 70px 60px 70px;
+    padding: 40px 0 60px;
     list-style: none;
 }
 
@@ -612,7 +712,7 @@ body {
     text-decoration: none;
     padding: 12px 24px;
     width: 60px;
-    height: 60px;
+    min-height: 60px;
 }
 
 .pagination-more {
@@ -620,7 +720,7 @@ body {
     box-sizing: border-box;
     padding: 12px 24px;
     width: 60px;
-    height: 60px;
+    min-height: 60px;
 }
 
 .pagination-active {
@@ -652,22 +752,21 @@ body {
     padding: 40px 70px 30px 70px;
   }
 
-  .footer-socials {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 142px;
-  }
-
   .socials-list {
-      margin: 0 70px 0 237px;
-      list-style: none;
-      padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 0 0;
   }
 
   .socials-link {
-    min-width: 48px;
-    min-height: 40px;
+    width: 48px;
+    height: 40px;
+    padding: 13px 14px 13px 12px;
+    display: flex;
+    justify-content: space-between;
 }
 
   .author-logo {
@@ -682,7 +781,7 @@ body {
 }
 .phone {
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 40px;
     color: #000000;
     text-decoration: none;

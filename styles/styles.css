@@ -1009,6 +1009,8 @@ div.recommendation-icon::before {
 
   .modal {
     position: relative;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     padding: 64px 70px;
     background-color: #ffffff;
@@ -1066,6 +1068,12 @@ div.recommendation-icon::before {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
+    margin: auto auto auto 0;
+    text-transform: capitalize;
+
+    display: flex;
+  align-items: center;
+  justify-content: center;
   }
 
   .adults-label-text, .kids-label-text {
@@ -1076,7 +1084,8 @@ div.recommendation-icon::before {
   }
 
   .modal-form {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 48px;
   }
 
@@ -1086,7 +1095,6 @@ div.recommendation-icon::before {
     width: 577px;
     min-height: 60px;
     border-radius: 10px;
-    grid-column: 1/-1;
  }
 
  .modal-label {
@@ -1114,9 +1122,11 @@ div.recommendation-icon::before {
     position: absolute;
     right: 89px;
     top: 52px;
+
  }
 
  .arrival-date, .departure-date {
+    position: relative;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -1137,3 +1147,118 @@ div.recommendation-icon::before {
     outline: 3px solid #83b3d3;
     background-color: #e6e6e6;
  }
+
+ .modal-input-icon {
+    position: absolute;
+    background-image: url(../images/date-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    top: 15px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+ }
+
+ .kids-adults-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    vertical-align: middle;
+    margin-bottom: 48px;
+ }
+ .kids-adults {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+.adults {
+    margin-right: 83px;
+}
+
+.adults, .kids {
+    position: relative;
+    display: flex;
+    min-height: 48px;
+    text-align: center;
+}
+
+.adults-label-text {
+    margin-right: 46px;
+}
+
+.kids-label-text {
+    margin-right: 10px;
+}
+
+.tooltip-btn {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    margin: auto 45px auto 0;
+    padding: 0;
+    max-width: 26px;
+    max-height: 26px;
+}
+
+.tooltip-btn:focus {
+    outline: none;
+}
+
+.tooltip-text {
+    position: absolute;
+    top: 53px;
+    right: 42px;
+    width: 256px;
+    min-height: 143px;
+    padding: 20px 22px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: none;
+    border-radius: 10px;
+    background-color: #333333;
+}
+
+.tooltip {
+    position: absolute;
+    margin-top: 15px;
+}
+
+.number-adults, .number-kids {
+    width: 31px;
+    height: 48px;
+    background-color: #F2F2F2;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.number-adults::-webkit-inner-spin-button,
+.number-kids::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.plus-btn, .minus-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 48px;
+    background-color: #F2F2F2;
+    border: none;
+    position: relative;
+}
+
+.adults-minus-btn {
+    border-radius: 4px 0 0 4px;
+}
+
+.adults-plus-btn, .kidas-plus-btn {
+    border-radius: 0 4px 4px 0;
+}

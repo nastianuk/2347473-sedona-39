@@ -863,6 +863,10 @@ div.recommendation-icon::before {
     background-color: #82B3D3;
 }
 
+.product-choosen-btn {
+    background-color: #7DB54F;
+}
+
 .card-btns {
     margin: 0 0 16px;
     display: flex;
@@ -898,6 +902,34 @@ div.recommendation-icon::before {
     width: 1060px;
 }
 
+.star {
+    width: 120px;
+    height: 17px;
+    margin: auto 0;
+}
+
+.star::before {
+    content: "";
+    display: block;
+    height: 17px;
+    background-image: url(../images/star.svg);
+    background-repeat: space no-repeat;
+    background-size: contain;
+    text-align: center;
+}
+
+.star-4 {
+    width: 88px;
+}
+
+.star-3 {
+    width: 65px;
+}
+
+.star-2 {
+    width: 40px;
+}
+
 /* pagination */
 
 .pagination-list {
@@ -912,23 +944,25 @@ div.recommendation-icon::before {
 }
 
 .pagination-link {
-    display: block;
-    box-sizing: border-box;
+    display: flex;
     background-color: #82B3D3;
     font-size: 20px;
     line-height: 36px;
     color: #ffffff;
     border-radius: 4px;
     text-decoration: none;
-    padding: 12px 24px;
+    padding: 11px 15px 13px 15px;
     width: 60px;
     min-height: 60px;
+    text-align: center;
+    justify-content: center;
 }
 
 .pagination-more {
-    display: block;
-    box-sizing: border-box;
-    padding: 12px 24px;
+    display: flex;
+    padding: 11px 15px 13px 15px;
+    justify-content: center;
+    align-items: center;
     width: 60px;
     min-height: 60px;
 }
@@ -1097,6 +1131,16 @@ div.recommendation-icon::before {
     border-radius: 10px;
  }
 
+ .modal-btn:hover, .modal-btn:focus {
+    background-color: #68A2CA;
+    outline: none;
+ }
+
+ .modal-btn:active {
+    background-color: #68A2CA;
+    color: rgba(255, 255, 255, 0.3);
+ }
+
  .modal-label {
     display: flex;
     justify-content: space-between;
@@ -1110,7 +1154,7 @@ div.recommendation-icon::before {
     font-size: 16px;
     line-height: 21px;
     position: absolute;
-    right: 120px;
+    right: 140px;
     top: 52px;
  }
 
@@ -1145,6 +1189,7 @@ div.recommendation-icon::before {
 
  .arrival-date:focus, .departure-date:focus {
     outline: 3px solid #83b3d3;
+    border-radius: 4px;
     background-color: #e6e6e6;
  }
 
@@ -1168,6 +1213,7 @@ div.recommendation-icon::before {
     vertical-align: middle;
     margin-bottom: 48px;
  }
+
  .kids-adults {
     display: flex;
     flex-direction: column;
@@ -1206,7 +1252,6 @@ div.recommendation-icon::before {
 .tooltip-btn:hover + .tooltip-text,
 .tooltip-btn:focus + .tooltip-text {
     display: block;
-
 }
 
 .tooltip-btn:focus {
@@ -1215,7 +1260,7 @@ div.recommendation-icon::before {
 
 .tooltip-text {
     position: absolute;
-    top: 53px;
+    top: 51px;
     right: 42px;
     width: 256px;
     min-height: 143px;
@@ -1228,6 +1273,7 @@ div.recommendation-icon::before {
     background-color: #333333;
     color: #ffffff;
     /* display: none; */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .tooltip-text::before {
@@ -1237,9 +1283,8 @@ div.recommendation-icon::before {
     height: 9px;
     position: absolute;
     bottom: 100%;
-    /* right: 46%; */
-    right: 118px;
-    top: -9px;
+    right: 119px;
+    top: -10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1277,6 +1322,9 @@ div.recommendation-icon::before {
     border: none;
     position: relative;
 }
+.plus-btn svg, .minus-btn svg{
+    opacity: 0.3;
+}
 
 .adults-minus-btn {
     border-radius: 4px 0 0 4px;
@@ -1285,3 +1333,34 @@ div.recommendation-icon::before {
 .adults-plus-btn, .kidas-plus-btn {
     border-radius: 0 4px 4px 0;
 }
+
+.plus-btn:active svg, .minus-btn:active svg {
+    opacity: 0.2;
+}
+
+.plus-btn:hover path, .minus-btn:hover path {
+    transition: 0.3s;
+    fill: #000000;
+    fill-opacity: 1;
+}
+
+.plus-btn:focus, .minus-btn:focus {
+    outline: none;
+}
+
+.plus-btn:focus-visible svg, .minus-btn:focus-visible svg {
+    outline-offset: 3px;
+    outline: 3px solid #82B3D3;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.plus-btn:focus-visible path, .minus-btn:focus-visible path {
+    fill: #000000;
+    fill-opacity: 1;
+    transition: 0.3s;
+}
+
+.modal-container-display {
+    display: none;
+  }

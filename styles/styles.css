@@ -1186,11 +1186,11 @@ div.recommendation-icon::before {
 }
 
 .adults-label-text {
-    margin-right: 46px;
+    margin: auto 46px auto 0;
 }
 
 .kids-label-text {
-    margin-right: 10px;
+    margin: auto 10px auto 0;
 }
 
 .tooltip-btn {
@@ -1201,6 +1201,12 @@ div.recommendation-icon::before {
     padding: 0;
     max-width: 26px;
     max-height: 26px;
+}
+
+.tooltip-btn:hover + .tooltip-text,
+.tooltip-btn:focus + .tooltip-text {
+    display: block;
+
 }
 
 .tooltip-btn:focus {
@@ -1220,7 +1226,24 @@ div.recommendation-icon::before {
     text-transform: none;
     border-radius: 10px;
     background-color: #333333;
+    color: #ffffff;
+    /* display: none; */
 }
+
+.tooltip-text::before {
+    content: "";
+    background-image: url(../images/triangle-tooltip.svg);
+    width: 19px;
+    height: 9px;
+    position: absolute;
+    bottom: 100%;
+    /* right: 46%; */
+    right: 118px;
+    top: -9px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .tooltip {
     position: absolute;

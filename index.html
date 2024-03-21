@@ -142,7 +142,7 @@
         <p class="newsletter-text subtitle-text">Только полезная информация и никакого спама,<br> честное бойскаутское!
         </p>
         <form class="newsletter-form" action="#" method="post">
-          <input class="newsletter-input" type="email" placeholder="Ваш e-mail">
+          <input class="newsletter-input" type="email" placeholder="Ваш e-mail" name="newsletter">
           <button class="newsletter-btn button" type="submit">Подписаться</button>
         </form>
       </section>
@@ -218,12 +218,14 @@
           </label>
           <label class="kids">
             <span class="kids-label-text">Дети:</span>
-              <button class="tooltip-btn" type="button">
-                <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+              <button class="tooltip-btn" type="button" aria-labelledby="tooltip-label-date">
+                <span class="visually-hidden">Тоолтуп о детях</span>
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
                   </svg>
               </button>
-              <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
             <button class="minus-btn kids-minus-btn" type="button" name="minus">
               <span class="visually-hidden">Кнопка минус</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

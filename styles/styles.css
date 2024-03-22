@@ -1575,5 +1575,5 @@ div.recommendation-icon::before {
 }
 
 .modal-container-display {
-    display: none;
+    /* display: none; */
   }

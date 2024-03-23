@@ -576,7 +576,7 @@ div.recommendation-icon::before {
     width: 15px;
 }
 
-.breadcrumbs-item:nth-child(2)::before {
+.breadcrumbs-item:not(:first-child)::before {
     content: ">";
     color: #ffffff;
     margin-right: 7px;
@@ -870,12 +870,14 @@ div.recommendation-icon::before {
     border-radius: 4px;
     background-image: url(../images/select-arrow.svg);
     background-repeat: no-repeat;
-    background-position: right 16px center;
+    background-position: right 18px center;
     appearance: none;
 }
 
 .button-card-list {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 160px;
     margin-left: auto;
     align-items: center;
 }
@@ -939,7 +941,7 @@ div.recommendation-icon::before {
     grid-template-columns: repeat(3, 340px);
     gap: 20px;
     width: 1060px;
-    margin: 0 0 40px 0;
+    margin: 0 0 35px 0;
     padding: 0;
     list-style: none;
 }
@@ -950,7 +952,7 @@ div.recommendation-icon::before {
     flex-direction: column;
     width: 340px;
     min-height: 438px;
-    padding: 20px;
+    padding: 19px 19px 21px 20px;
     border: 1px solid #E6E6E6;
     border-radius: 4px;
 }
@@ -1110,6 +1112,7 @@ div.recommendation-icon::before {
 
 .pagination-list {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 40px 0 0;
     list-style: none;
@@ -1188,8 +1191,10 @@ div.recommendation-icon::before {
   .socials-list {
     margin: 0;
     padding: 0;
+    max-width: 183px;
     margin-right: auto;
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     align-items: center;
   }

@@ -45,6 +45,7 @@ body {
     line-height: 21px;
     color: #000000;
     background-color: #F2F2F2;
+    min-width: 1200px;
 }
 
 .page-container {
@@ -481,7 +482,7 @@ div.recommendation-icon::before {
 
 .newsletter-input {
     width: 452px;
-    height: 52px;
+    min-height: 52px;
     border-radius: 4px 0 0 4px;
     border: #ffffff;
     line-height: 24px;
@@ -1575,5 +1576,5 @@ div.recommendation-icon::before {
 }
 
 .modal-container-display {
-    /* display: none; */
+    display: none;
   }

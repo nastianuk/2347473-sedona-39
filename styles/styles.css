@@ -442,16 +442,15 @@ div.recommendation-icon::before {
     min-height: 415px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    padding-top: 96px;
+    padding: 96px 258px 104px 259px;
     text-align: center;
 }
 
 .newsletter-background-image {
     background-image: url("../images/subscribe-background.jpg");
-    background-size: 100% auto, cover;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-color: #F2F2F2;
+    background-color: #68A2CA;
 }
 
 .newsletter-title {

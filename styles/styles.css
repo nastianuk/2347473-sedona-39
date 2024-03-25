@@ -1385,11 +1385,15 @@ div.recommendation-icon::before {
     color: rgba(255, 255, 255, 0.3);
 }
 
-.modal-label {
+.modal-label-wrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
     vertical-align: middle;
+}
+
+.modal-label {
+    margin: auto 0 auto 0;
 }
 
 .modal-under-text-error {
@@ -1467,23 +1471,23 @@ div.recommendation-icon::before {
     justify-content: space-between;
 }
 
-.adults {
+.adults-wrapper {
     margin-right: 83px;
 }
 
-.adults,
-.kids {
+.adults-wrapper,
+.kids-wrapper {
     position: relative;
     display: flex;
     min-height: 48px;
     text-align: center;
 }
 
-.adults-label-text {
+.adults{
     margin: auto 46px auto 0;
 }
 
-.kids-label-text {
+.kids {
     margin: auto 10px auto 0;
 }
 
@@ -1622,5 +1626,3 @@ div.recommendation-icon::before {
 .tooltip-btn:hover + .tooltip-text {
     display: block;
 }
-
-

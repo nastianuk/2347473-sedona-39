@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -143,16 +143,19 @@
           <section class="search-hotel" data-test="search">
             <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
             <p class="search-hotel-title title-text">Заинтересовались?</p>
-            <p class="search-hotel-text subtitle-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <p class="search-hotel-text subtitle-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
+              предложения гостиниц в Седоне</p>
             <button class="search-hotel-btn button" type="button">Поиск гостиницы в Седоне</button>
           </section>
 
           <section class="newsletter newsletter-background-image" data-test="subscribe">
             <h2 class="newsletter-title title-text">Подпишитесь на рассылку</h2>
-            <p class="newsletter-text subtitle-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+            <p class="newsletter-text subtitle-text">Только полезная информация и никакого спама,<br> честное
+              бойскаутское!</p>
             <form class="newsletter-form" action="#" method="post">
               <label class="visually-hidden" for="email-input">e-mail</label>
-              <input class="newsletter-input" type="email" placeholder="Ваш e-mail" name="newsletter" id="email-input">
+              <input class="newsletter-input" type="email" placeholder="Ваш e-mail" name="newsletter" id="email-input"
+                required>
               <button class="newsletter-btn button" type="submit">Подписаться</button>
             </form>
           </section>
@@ -217,24 +220,30 @@
           <span class="visually-hidden">Кнопка закрытия модального окна</span>
         </button>
         <form class="modal-form" method="post">
-          <label class="modal-label" for="arrive">
-            <span class="modal-text">Дата заезда:</span>
+          <div class="modal-label-wrapper">
+            <label class="modal-label" for="arrive">
+              <span class="modal-text">Дата заезда:</span>
+            </label>
             <input class="arrival-date" type="text" name="arrival-date" value="27 апреля 2020"
               placeholder="Укажите дату" id="arrive" required>
             <span class="modal-input-icon"></span>
             <span class="modal-under-text-error">Мы не можем отправить вас в прошлое.</span>
-          </label>
-          <label class="modal-label" for="departure">
-            <span class="modal-text">Дата выезда:</span>
+          </div>
+          <div class="modal-label-wrapper">
+            <label class="modal-label" for="departure">
+              <span class="modal-text">Дата выезда:</span>
+            </label>
             <input class="departure-date" type="text" name="departure-date" value="1 сентября 2023"
               placeholder="Укажите дату" id="departure" required>
             <span class="modal-input-icon"></span>
             <span class="modal-under-text">На эти даты есть свободные номера. Пока есть.</span>
-          </label>
+          </div>
           <div class="kids-adults">
             <div class="kids-adults-wrapper">
-              <label class="adults" for="adults">
-                <span class="adults-label-text">Взрослые:</span>
+              <div class="adults-wrapper">
+                <label class="adults" for="adults">
+                  <span class="adults-label-text">Взрослые:</span>
+                </label>
                 <button class="minus-btn adults-minus-btn" type="button" name="minus">
                   <span class="visually-hidden">Кнопка минус</span>
                   <svg class="minus-svg" width="14" height="14" viewBox="0 0 14 2" fill="none"
@@ -249,9 +258,11 @@
                     <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3" />
                   </svg>
                 </button>
-              </label>
-              <label class="kids" for="kids">
-                <span class="kids-label-text">Дети:</span>
+              </div>
+              <div class="kids-wrapper">
+                <label class="kids" for="kids">
+                  <span class="kids-label-text">Дети:</span>
+                </label>
                 <button class="tooltip-btn" type="button" aria-labelledby="tooltip-label-date">
                   <span class="visually-hidden">Тоолтуп о детях</span>
                   <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -260,8 +271,7 @@
                       fill="white" />
                   </svg>
                 </button>
-                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
-                  будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                 <button class="minus-btn kids-minus-btn" type="button" name="minus">
                   <span class="visually-hidden">Кнопка минус</span>
                   <svg class="minus-svg" width="14" height="14" viewBox="0 0 14 2" fill="none"
@@ -276,7 +286,7 @@
                     <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3" />
                   </svg>
                 </button>
-              </label>
+              </div>
             </div>
             <button class="modal-btn button" type="submit">Найти</button>
           </div>

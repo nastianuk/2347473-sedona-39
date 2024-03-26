@@ -293,6 +293,22 @@
         </form>
       </div>
     </div>
+
+    <script>
+      const modal = document.querySelector(".modal-container-display");
+      const clsModalBtn = modal.querySelector(".close-modal");
+      const searchBtn = document.querySelector(".search-hotel-btn");
+      const clientBtn = document.querySelector(".nav-btn");
+      clsModalBtn.onclick = function () {
+        modal.classList.add("modal-container-display");
+      };
+      searchBtn.onclick = function () {
+        modal.classList.remove("modal-container-display");
+      };
+      clientBtn.onclick = function () {
+        modal.classList.remove("modal-container-display");
+      };
+    </script>
   </body>
 
 </html>

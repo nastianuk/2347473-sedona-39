@@ -1626,3 +1626,7 @@ div.recommendation-icon::before {
 .tooltip-btn:hover + .tooltip-text {
     display: block;
 }
+
+.modal-container-display{
+    display: none;
+  }
